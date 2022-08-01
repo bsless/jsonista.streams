@@ -101,21 +101,21 @@
 
     (t/testing "As Array"
       (t/testing "With root value separator"
-        (s/write-values file original j/default-object-mapper {:write-value-as-array true
+        (s/write-values file original j/default-object-mapper {:write-values-as-array true
                                                                :root-value-separator "\n"})
         (t/is (= (j/write-value-as-string original) (slurp file)))
         (.delete file))
       (t/testing "Without root value separator"
-        (s/write-values file original j/default-object-mapper {:write-value-as-array true})
+        (s/write-values file original j/default-object-mapper {:write-values-as-array true})
         (t/is (= (j/write-value-as-string original) (slurp file)))
         (.delete file)))
     (t/testing "As Values"
       (t/testing "With root value separator"
-        (s/write-values file original j/default-object-mapper {:write-value-as-array false
+        (s/write-values file original j/default-object-mapper {:write-values-as-array false
                                                                :root-value-separator "\n"})
         (t/is (= (str/join "\n" (map j/write-value-as-string original)) (slurp file)))
         (.delete file))
       (t/testing "Without root value separator"
-        (s/write-values file original j/default-object-mapper {:write-value-as-array false})
+        (s/write-values file original j/default-object-mapper {:write-values-as-array false})
         (t/is (= (str/join " " (map j/write-value-as-string original)) (slurp file)))
         (.delete file)))))

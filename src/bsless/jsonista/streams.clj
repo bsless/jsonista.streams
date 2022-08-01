@@ -61,7 +61,7 @@
   [this value mapper options]
   `(let [this# ~this
          options# ~options
-         as-array# (:write-value-as-array options# true)
+         as-array# (:write-values-as-array options# true)
          ^String root-sep# (:root-value-separator options#)
          writer# (-> ~mapper
                      (.writerFor Object)
