@@ -12,13 +12,13 @@ See [API.md](./API.md)
 ### Deps
 
 ```clojure
-io.github.bsless/jsonista.streaming {:mvn/version "0.0.2"}
+io.github.bsless/jsonista.streams {:mvn/version "0.0.2"}
 ```
 
 ### Leiningen
 
 ```clojure
-[io.github.bsless/jsonista.streaming "0.0.2"]
+[io.github.bsless/jsonista.streams "0.0.2"]
 ```
 
 ## Usage
